@@ -7,4 +7,4 @@ before_install:
     - docker build -t vinibotto/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run vinibottto/docker-react npm run test -- --coverage
+    - docker run -e CI=true vinibottto/docker-react npm run test
